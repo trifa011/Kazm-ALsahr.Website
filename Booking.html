@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Book a Seat | Kazem Al-Saher</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  
+  <header class="site-header">
+
+    <div class="nav-wrap">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        Kazem <em>Al-Saher</em>
+      </a>
+
+
+      <!-- Navigation -->
+      <nav class="site-nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="journey.html">Journey</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="songs.html">Songs & Poetry</a>
+
+        <a href="booking.html" class="active">Book a Seat</a>
+
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+
+      <!-- Dark Mode Button -->
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="icon">🌙</span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <section class="page-banner">
+
+    <p class="small-title">
+      كاظم الساهر
+    </p>
+
+    <h1>Reserve Your Seat</h1>
+
+  </section>
+
+
+  <!-- BOOKING SECTION -->
+  <section class="booking">
+
+    <div class="section-inner">
+
+      <p class="booking-intro">
+        Choose your seat and fill in your details below.
+        We will contact you with your confirmation.
+      </p>
+      <span class="field-hint"> Age: 15+ </span>
+
+
+      <!-- BOOKING FORM -->
+      <form id="booking-form" class="booking-form">
+
+
+        <!-- SEAT TYPE -->
+        <div class="form-row">
+
+          <label>Choose Your Seat</label>
+
+          <div class="seat-options">
+
+
+            <!-- VIP -->
+            <label class="seat-choice">
+
+              <input
+                type="radio"
+                name="seat"
+                value="VIP"
+                required
+            >
+
+              <span>
+                 VIP - $150
+              </span>
+
+            </label>
+
+
+            <!-- NORMAL -->
+            <label class="seat-choice">
+
+              <input
+                type="radio"
+                name="seat"
+                value="Normal"
+              >
+
+              <span>
+                Normal - $80
+              </span>
+
+            </label>
+
+
+            <!-- BASIC -->
+            <label class="seat-choice">
+
+              <input
+                type="radio"
+                name="seat"
+                value="Basic"
+              >
+
+              <span>
+                Basic - $40
+              </span>
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        
+        <div class="form-row">
+
+          <label for="full-name">
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            id="full-name"
+            name="fullName"
+            placeholder="e.g. Trifa Al-najjar"
+            required
+          >
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="form-row">
+
+          <label for="phone">
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="e.g. +964 750 123 4567"
+            required
+          >
+
+        </div>
+
+
+<div class="form-row">
+
+  <label for="email">
+    Email Address
+  </label>
+
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="e.g. Trifa@example.com"
+    required
+  >
+
+</div>
+          >
+
+          <span class="field-hint">
+            At least 6 characters.
+          </span>
+
+        </div>
+
+
+        <!-- COMMENTS -->
+        <div class="form-row">
+
+          <label for="comment">
+            Comments & Suggestions
+          </label>
+
+          <textarea
+            id="comment"
+            name="comment"
+            rows="4"
+            placeholder="Any special requests, seating preferences, or feedback..."
+          ></textarea>
+
+        </div>
+
+
+        <!-- SUBMIT BUTTON -->
+        <button
+          type="submit"
+          class="booking-button"
+        >
+          Book My Seat
+        </button>
+
+
+        <!-- FORM MESSAGE -->
+        <p
+          id="form-message"
+          class="form-message"
+        ></p>
+
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  
+  <footer class="site-footer">
+
+    <p>
+      Kazem Al-Saher | Caesar of Arabic Song
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
