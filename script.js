@@ -34,6 +34,10 @@ if (bookingForm) {
       return;
     }
 
+    const themeToggle = document.getElementById("theme-toggle");
+    const icon = themeToggle.querySelector(".icon");
+
+    
     // Check seat
     if (!selectedSeat) {
       showMessage("Please choose a seat.", "error");
