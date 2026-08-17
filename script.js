@@ -3,14 +3,29 @@ const formMessage = document.getElementById("form-message");
 
 if (bookingForm) {
   bookingForm.addEventListener("submit", (event) => {
-    
+
     event.preventDefault();
 
-   
     const fullName = document.getElementById("full-name");
     const phone = document.getElementById("phone");
-    const password = document.getElementById("password");
+    const email = document.getElementById("email");
+    const comment = document.getElementById("comment");
 
+    const selectedSeat = document.querySelector(
+      'input[name="seat"]:checked'
+    );
+
+    formMessage.textContent =
+      "Booking successful! Thank you, " + fullName.value + "!";
+
+    console.log("Name:", fullName.value);
+    console.log("Phone:", phone.value);
+    console.log("Email:", email.value);
+    console.log("Seat:", selectedSeat.value);
+    console.log("Comment:", comment.value);
+
+  });
+}
    
     if (fullName.value.trim() === "") {
       showMessage("Please enter your full name.", "error");
