@@ -20,6 +20,9 @@ if (bookingForm) {
       'input[name="seat"]:checked'
     );
 
+
+    
+
     // Check full name
     if (fullName.value.trim() === "") {
       showMessage("Please enter your full name.", "error");
@@ -33,9 +36,6 @@ if (bookingForm) {
       phone.focus();
       return;
     }
-
-    const themeToggle = document.getElementById("theme-toggle");
-    const icon = themeToggle.querySelector(".icon");
 
     
     // Check seat
@@ -58,4 +58,22 @@ if (bookingForm) {
 
     bookingForm.reset();
   });
+  
 }
+const themeToggle = document.getElementById("theme-toggle");
+const icon = themeToggle.querySelector(".icon");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+  icon.textContent = "☀️";
+}
+
+themeToggle.addEventListener("click", () => {
+ 
+  const isDark = document.body.classList.toggle("dark");
+  
+  icon.textContent = isDark ? "☀️" : "🌙";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
