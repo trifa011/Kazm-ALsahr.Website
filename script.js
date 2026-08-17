@@ -46,14 +46,12 @@ if (bookingForm) {
     }
 
 
+showMessage(
+  `Thank you, ${fullName.value.trim()}! Your chair is reserved. We'll confirm by phone shortly.`,
+  "success"
+);
 
-    showMessage(
-      `Thank you, ${fullName.value.trim()}! Your chair is reserved. We'll confirm by phone shortly.`,
-      "success"
-    );
-    bookingForm.reset();
-  });
-}
+bookingForm.reset();
 
 function showMessage(text, type) {
   formMessage.textContent = text;
